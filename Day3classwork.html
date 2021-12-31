@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conditional Statement</title>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+</head>
+<body>
+
+
+<div class="container-fluid">
+	<div class="row">
+		'<div class="col-12">
+		  	<p>Response: <span id='message'></span></p>
+		</div>'
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+
+var nationality=prompt('What is your nationality?');
+var age=prompt('How old are you?');
+
+
+if((nationality.trim().toLowerCase() == 'nigerian') && ( age >=0)){ 
+	alert('You are eligible to vote');
+}
+
+else if((nationality.trim().toLowerCase() !== 'nigerian') && (age >=18)){
+
+alert('You are eligible to vote');
+}
+
+
+else{
+	alert('Sorry, you are not eligible to vote');
+}
+/*Method2
+if((nationality.trim().toLowerCase() == 'nigerian') || (age >=18)){
+
+alert('You are eligible to vote');
+}
+
+</script>
+</body>
+</html>

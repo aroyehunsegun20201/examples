@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conditional Statement</title>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+</head>
+<body>
+
+
+<div class="container">
+	<div class="row">
+		'<div class="col-12" id='bg' style="border:1px solid black; background-color: brown; height:200px;" >
+		  	<h2 align='center' style="color:green;">2019/2020 UTME Online Result Checker</h2>
+
+		  	<p>Feedback on Assessment:<b><span id='feedback'></span></b></p>
+		  	<p>Have You Written Your Exam Yet?
+		  	<select id="choice">
+		  		<option value='yes'>Yes</option>
+		  		<option value='no'>No</option>
+		  	</select>
+		  	
+		  	<select id="location">
+		  		<option value='null'>Please select your exam location</option>
+		  		<option value='Abuja'>Abuja</option>
+		  		<option value='Lagos'>Lagos</option>
+		  		<option value='PortHarcourt'>Port Harcourt</option>
+		  	</select>
+		  	<button class='btn btn-large btn-success' onclick="assignment()">Get my result</button></p>
+		  	<input type="reset">
+		</div>'
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+
+function assignment(){
+			document.getElementById('feedback').innerHTML= '';
+
+		  	var answer='Total Score:320';
+		  	var not_ready='Results not ready';
+		  	var written=document.getElementById('choice').value;
+		  	var locus=document.getElementById('location').value;
+
+		  	if ((written == 'no')){
+		  		document.getElementById('feedback').innerHTML= '';
+		  		alert('How do you expect to get a result when you have not written exam?');
+		  	}
+			else if ((written == 'yes')&&( locus=='Lagos')){
+		  		document.getElementById('feedback').innerHTML=answer
+		  	}
+		  	
+		  	else if (written=='yes' && locus=='null'){
+		  		alert('You have not made a selection!')
+		  	}
+
+		  	
+		 	 else{
+		  		document.getElementById('feedback').innerHTML= not_ready
+		  	};
+		    
+		  	document.getElementById('bg').style.backgroundColor='yellow'}
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Practice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+	<script type="text/javascript"  charset="UTF-8"></script><style type="text/css">
+		
+	</style>
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<div class="rows">
+			
+			<div class="col-md-12">
+				<table class="table table-bordered table-striped">
+					<thead class="thead-dark">
+						<tr>
+							<th>S/N</th>
+							<th>Staff</th>
+							<th>Position</th>
+							<th>Basic Salary</th>
+							<th>Outstanding Loan</th>
+							<th>Bonus Received</th>
+							<th>Take Home</th>
+							<th>Computations</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1.</td>
+							<td>Prosper Ibe</td>
+							<td>CEO</td>
+							<td id="bsv1" class="calc">1300000</td>
+							<td id="ltv1" class="calc">250000</td>
+							<td id="brv1" class="calc">370000</td>
+							<td id="thv1"></td>
+							<td class="btn btn-light btn-block" onclick="
+
+							takehome('bsv1','brv1','ltv1','thv1');
+				
+
+								">Evaluate</td>
+						</tr>
+
+						<tr>
+							<td>2.</td>
+							<td>Oyekunbi Adams</td>
+							<td>COO</td>
+							<td id="bsv2" class="calc">1200000</td>
+							<td id="ltv2" class="calc">308000</td>
+							<td id="brv2" class="calc">520000</td>
+							<td id="thv2"></td>
+							<td class="btn btn-light btn-block" onclick="
+								takehome('bsv2','brv2','ltv2','thv2');
+
+							">Evaluate</td>
+						</tr>
+
+						<tr>
+							<td>3.</td>
+							<td>Segun Aryuhen</td>
+							<td>Director</td>
+							<td class="calc">1000000</td>
+							<td class="calc">2507000</td>
+							<td class="calc">630000</td>
+							<td id="thv3"></td>
+							<td class="btn btn-light btn-block" onclick="
+
+							">Evaluate</td>
+						</tr>
+
+						<tr>
+							<td>4.</td>
+							<td>Matthayo Funds</td>
+							<td>Manager</td>
+							<td class="calc">850000</td>
+							<td class="calc">0</td>
+							<td class="calc">490000</td>
+							<td id="thv4"></td>
+							<td class="btn btn-light btn-block" onclick="
+
+							">Evaluate</td>
+						</tr>
+
+						<tr>
+							<td>5.</td>
+							<td>Mr. Kalio</td>
+							<td>Developer</td>
+							<td class="calc">70000</td>
+							<td class="calc">0</td>
+							<td class="calc">3650000</td>
+							<td id="thv5"></td>
+							<td class="btn btn-light btn-block" onclick="
+
+							">Evaluate</td>
+						</tr>
+
+						<tr style="font-weight:bold" class="tr">
+							<td style="text-align:center" colspan="2">TOTAL</td>
+							<td class="btn btn-dark btn-block" onclick="
+
+
+							">CALCULATE</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+	
+	
+	<script type="text/javascript">
+
+
+		
+			
+
+		function takehome(bsValue, brValue, ltValue, thValue) {
+			var basic = document.getElementById(bsValue).innerHTML;
+			var bonus = document.getElementById(brValue).innerHTML;
+			var loan = document.getElementById(ltValue).innerHTML;
+
+
+			document.getElementById(thValue).innerHTML= Number(basic) + Number(bonus) - Number(loan);
+		
+		}
+/*
+		function breakdown(bsValue, brValue, ltValue) {
+							
+			
+		}
+
+
+*/
+
+
+
+	</script>
+
+</body>
+</html>

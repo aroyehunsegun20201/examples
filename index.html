@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+<style type="text/css">
+	     
+
+        body{
+	    	background-color: #F9F9F9; 
+	    }
+
+		h3{
+			margin-bottom: 20px;
+		}
+
+		p{
+			font-size: 24px;
+		}
+
+		li{
+			list-style-type: none;
+			margin-bottom: 27px;
+			font-size: 20px;
+			margin-left: -25px;
+		}
+
+		.btn{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>Subject</h3>
+				<ul>
+					<li> English</li>	
+					<li> Maths</li>
+					<li> Chemistry</li>
+					<li> Biology</li>
+					<li> French</li>				
+				</ul>
+				<input type="button" onclick='getResult()' name="button" class="btn btn-warning" value="Get Result">
+
+			</div>
+			<div class="col-md-4">
+				<h3>Score</h3>
+				<p><input type="text" name="englishscore" id="englishScore" class="form-control" onchange="getGrade('englishScore','englishGrade')" ></p>
+				<p><input type="text" name="mathsscore" onchange="getGrade('mathsScore','mathsGrade')" id="mathsScore" class="form-control" ></p>
+				<p><input type="text" name="chemistryscore" id="chemistryScore" class="form-control" onchange="getGrade('chemistryScore','chemistryGrade')" ></p>
+				<p><input type="text" name="biologyscore" id="biologyScore" class="form-control" onchange="getGrade('biologyScore','biologyGrade')" ></p>
+				<p><input type="text" name="frenchscore" onchange="getGrade('frenchScore','frenchGrade')" id="frenchScore" class="form-control"></p>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<h3>Grade</h3>
+				<p><input type="text" name="englishgrade" id="englishGrade" class="form-control"></p>
+				<p><input type="text" name="mathsgrade" id="mathsGrade" class="form-control"></p>
+				<p><input type="text" name="chemistrygrade" id="chemistryGrade" class="form-control"></p>
+				<p><input type="text" name="biologygrade" id="biologyGrade" class="form-control"></p>
+				<p><input type="text" name="frenchgrade" id="frenchGrade" class="form-control"></p>
+			</div>
+
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<p>Total:</p>
+			</div>
+			<div class="col-md-4">
+				<p><span id="totalScore"></span></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<p onmouseover="mary()">Remark:</p>
+			</div>
+			<div class="col-md-4">
+				<p><span id="comment"></span></p>
+			</div>
+			<div class="col-md-5">
+				<img src="" id="emoji" height="170px">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<p onmouseover="John('pure water')">Average:</p>
+			</div>
+			<div class="col-md-4">
+				<p onclick='mary()'><span id="averageScore">jj</span></p>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript">
+function getGrade(data_id,grade_id){//getGrade('demo','test')
+	var score =	document.getElementById(data_id).value;
+	if(score >= 70 && score <=100){
+		var label ='A';
+	}else if(score >=60 && score <=69){
+		var label='B';
+	}
+	else if(score >=50 && score <=59){
+		var label='C';
+	}
+	else if(score >=40 && score <=45){
+		var label='D';
+	}
+	else if(score >=40 && score < 45){
+		var label='E';
+	}else if(score < 40 && score >=0){
+		var label='F';
+	} else{	label = 'Out of Range';	}
+	document.getElementById(grade_id).value=label;
+}
+// if(isNaN(grade)){
+
+// }
+
+function getResult(){
+	var total = 0; var total_subjects = 0
+	if(document.getElementById('englishScore').value <=100){
+		total = total + Number(document.getElementById('englishScore').value);
+		total_subjects = total_subjects + 1;
+	}
+	if(document.getElementById('mathsScore').value <=100){
+		total = total + Number(document.getElementById('mathsScore').value);
+		total_subjects = total_subjects + 1;
+	}
+	if(document.getElementById('chemistryScore').value <=100){
+		total = total + Number(document.getElementById('chemistryScore').value);
+		total_subjects = total_subjects + 1;
+	}
+	if(document.getElementById('biologyScore').value <=100){
+		total = total + Number(document.getElementById('biologyScore').value);
+		total_subjects = total_subjects + 1;
+	}
+	if(document.getElementById('frenchScore').value <=100){
+		total = total + Number(document.getElementById('frenchScore').value);
+		total_subjects = total_subjects + 1;
+	}
+	
+	var average = (total/total_subjects) ;
+	//display the total
+	document.getElementById('totalScore').innerHTML = total ;
+	//display the average
+	document.getElementById('averageScore').innerHTML = average;
+	if(average >= 50){
+		document.getElementById('comment').innerHTML = 'You did well' ;
+	}else{
+		document.getElementById('comment').innerHTML = 'You disappointed your teacher' ;
+	}
+}
+	</script>
+
+
+</body>
+</html>

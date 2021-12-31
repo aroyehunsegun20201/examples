@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>database week</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row"><div class="col-md-12"><h1>DATABASE WEEK</h1></div></div>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>INTRODUCTION TO DATABASE – DAY 1</h2><br>
+				<p>
+					Anytime you desire that your ‘website’ stores data (not files) such as users’ input.<br>
+					Consider: your Facebook profile contains the data you supplied during registration.<br>
+					Variable names in javascript can only store data while the page lasts.<br>
+					Database allows for a persistent data store<br>
+					In computing, database is represented using the drum symbol
+				</p>
+				<img src="datapic1.png" class="img-fluid" alt="data scheme image"><br>
+
+				<p>
+					A database is a collection of data organized in a particular way<br>
+					Physically, database servers are dedicated computers that hold the actual databases and run only the DBMS and related software<br>
+					Access to database is provided by DBMS<br>
+					A database management system (DBMS) is a computer software application that interacts with the user, other applications, and the database itself to capture and analyze data<br>
+					Commonly used DBMS are MySQL, Oracle etc<br>
+					SQL, pronounced “SeQUEL” is a standard language for accessing databases.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Installation</h3><br>
+				<p>
+					The installer includes all of the software necessary to run out of the box
+				</p>
+				<h4>Common Relational DBMS</h4><br>
+				<p>
+					<b>SQLite</b> Open Source SQL database used for databases in cellphones, PDAs, MP3 players, set-top boxes, and other electronic gadgets. <br>
+					<b>MySQL</b> :most popular open source SQL database typically used for web application development, and often accessed using PHP.<br>
+					<b>Oracle DB</b>: owned by the Oracle corporation and the code is not open sourced. used for large applications, particularly in the banking industry. Most of the world’s top banks run Oracle applications because Oracle offers a powerful combination of technology and comprehensive, pre-integrated business applications, including key functionality built specifically for banks.
+				</p>
+				<p>
+					PostgreSQL: an open source SQL database that is not controlled by any corporation typically used for web application development.<br>
+					SQL Server: owned by Microsoft. Like Oracle DB, the code is also close sourced.<br>
+					SQL Server is mainly used by large enterprise applications. The major difference between Oracle and SQL Server is that SQL Server only supports the Windows Operating System.
+				</p>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Relational Database</h3>
+				<p>
+					A relational database is a database that organizes information into one or more tables.<br>
+					A table is a collection of data organized into rows and columns. Tables are sometimes referred to as relations.<br> 
+					A column is a set of data values of a particular type. <br>
+					A row is a single record in a table. 
+				</p>
+
+				<h4>Definitions</h4>
+
+				<p>
+					<b>Database:</b> A database is a collection of tables, with related data.<br>
+					<b>Table:</b>  a matrix with data. A table in a database looks like a simple spreadsheet.<br>
+					<b>Column:</b>Column: One column (data element) contains data of one and the same kind, for example the column postcode.<br>
+					<b>Row:</b>  An entry or record, is a group of related data, for example the data of one subscription.<br>
+					<b>Redundancy:</b> Storing data twice, redundantly to make the system faster.<br>
+					<b>Primary Key:</b> A primary key is unique. <br>
+					<b>Foreign Key:</b> A foreign key is the linking pin between two tables. * 
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>SQL Syntax</h3>
+				<p>
+					Most of the actions you need to perform on a database are done with SQL statements.<br>
+					SQL keywords are NOT case sensitive: select is the same as SELECT<br>
+					Some database systems require a semicolon at the end of each SQL statement.<br>
+					Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.
+				</p>
+
+				<h4>SQL Comments</h4>
+				<p>
+					Comments can be used to explain sections of SQL statements.<br>
+					Comments can also be used to prevent execution, when testing alternative SQL statements.<br>
+					Single line comments start with –<br>
+					Multi-line comments start with /* and end with */.<br>
+					Any text between /* and */ will be ignored.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Structured Query Language SQL</h3>
+				<p>
+					SQL can be primarily divided into two parts: The Data Manipulation Language (DML) and the Data Definition
+				</p>
+				<h4>DDL</h4>
+				<p>
+					The DDL part of SQL permits database tables to be created or deleted. It also define indexes (keys), specify links between tables, and impose constraints between tables.<br>
+					CREATE DATABASE - creates a new database<br>
+					ALTER DATABASE - modifies a database<br>
+					CREATE TABLE - creates a new table<br>
+					ALTER TABLE - modifies a table<br>
+					DROP TABLE - deletes a table<br>
+					CREATE INDEX - creates an index (search key)<br>
+					DROP INDEX - deletes an index<br>
+				</p>
+				<h4>DML part of SQL</h4>
+				<p>
+					The query and update commands form the DML part of SQL<br>
+					SELECT - extracts data from a database<br>
+					UPDATE - updates data in a database<br>
+					DELETE - deletes data from a database<br>
+					INSERT INTO - inserts new data into a database
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>CREATING DATABASE AND TABLES</h3>
+				<p>
+					The first step is to Create a database<br>
+					Syntax is CREATE DATABASE my_db;<br>
+					Database tables can be added with the CREATE TABLE statement.<br>
+					The syntax for creating a table is:
+					CREATE TABLE tablename(<br>
+					columnname data_type(size) constraints DEFAULT 'default value‘,<br>
+					columnname data_type(size) constraints DEFAULT 'default value‘,<br>
+					)<br>
+					NOTE: Constraints may be multiple, constraints and DEFAULT values are optional
+				</p>
+				<p>
+					A simpler (considering the required options) syntax for creating a table is:<br>
+					CREATE TABLE table_name<br>(<br>column_name1 data_type(size),<br>column_name2 data_type(size)<br>....<br>);
+					Example: Create a database called ecommerce and a table called product as follows:<br>
+					CREATE DATABASE ecommerce;
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3></h3>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+<script type="text/javascript" src='js/jquery.min.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+			$('p').addClass('animate__animated animate__bounce')
+
+
+	});
+</script>
+</body>
+</html>

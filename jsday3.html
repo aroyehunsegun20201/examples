@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1 id="way">WHO IS THE WAY?</h1>
+				<button class="btn btn-dark">This is the way</button>
+				
+				<input type="button" class='btn btn-grey' name="submit" value="Like Page" id="sub">
+
+			
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('button').click(function(){
+				var t = $('h1').css('font-family')
+				$('h1').css('border','4px solid red')
+			})
+
+			/*$('#sub').click(function(){
+				if($(this).hasClass('btn-primary')){
+					$(this).val('Like Page')
+					$(this).removeClass('btn-primary')
+					$(this).addClass('btn btn-light')
+				}else{
+					$(this).val('Liked')
+					$(this).removeClass('btn-light')
+					$(this).addClass('btn btn-primary')				
+				}
+				
+
+			})*/
+
+		})
+
+
+	</script>
+</body>
+</html>

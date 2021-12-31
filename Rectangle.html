@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Greetings</title>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+</head>
+<body>
+ <div class="container-fluid">
+ 	<div class="row">
+ 		<div class="col-md-12" >
+ 			
+
+ 			<label for='a'>Value 1</label>
+ 			<input type="text" id='a' name="val1">
+
+ 			<label for='b'>Value 2</label>
+ 			<input type="text" id='b' name="val2">
+
+ 			<label for='c'>Value 3</label>
+ 			<input type="text" id='c' name="val3">
+
+ 			<input type="button" name="btnCalculate" id='btnCalculate' value='Average' onclick="
+
+ 			var a=document.getElementById('a').value;
+			var b=document.getElementById('b').value;
+			var c=document.getElementById('c').value;
+			document.getElementById('averesult').value=ave(a,b,c);
+ 			">
+			<label for='averesult'>Average</label>
+ 			<input type="text" id='averesult' name="average">
+ 			
+ 		</div>
+ 	</div>
+ </div>
+
+
+<script type="text/javascript">
+
+
+
+function ave(a,b,c) {
+var sum=Number(a)+Number(b)+Number(c)
+ average=sum/3;
+	return average;
+
+}
+
+/*function rectangleArea(){
+	var length=document.getElementById('length').value
+	var breadth=document.getElementById('breadth').value
+	var area=length*breadth;
+	return area;
+}
+*/
+
+</script>
+</body>
+</html>

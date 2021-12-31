@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MiniProject</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<script type="text/javascript">
+	
+
+function result() {
+	
+				var	score1=document.getElementById('eng').value;
+				var	score2=document.getElementById('math').value;
+				var	score3=document.getElementById('chem').value;
+				var	score4=document.getElementById('bio').value;
+				var	score5=document.getElementById('french').value;
+
+					var total= Number(score1)+Number(score2)+Number(score3)+Number(score4)+Number(score5);
+					var ave=total/5;
+
+					document.getElementById('total').value=total;
+					document.getElementById('average').value=ave;
+
+
+						if (ave>=0 && ave<=49){
+
+							document.getElementById('remark').value='Failed';
+
+						}else if(ave>=50 && ave<=100){
+
+							document.getElementById('remark').value='Passed';
+						}else{
+
+							document.getElementById('remark').value='Please check scores are valid';
+						}
+
+	
+}
+
+
+</script>
+</head>
+<body>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12" align="center"><h1>GRADE SHEET</h1></div>
+	</div>
+	<div class="row">
+
+		<div class="col-md-12">
+			<table>
+				<tr>
+					<th>Subject</th>
+					<th>Score</th>
+					<th>Grade</th>
+				</tr>
+				<tr>
+					<td>English</td>
+					<td><input type="text" id='eng' name="english" onchange="gradeeng()"></td>
+					<td><input type="text" id='enggrade' name="enggrade"></td>
+				</tr>
+				<tr>
+					<td>Maths</td>
+					<td><input type="text" id='math' name="math" onchange="grademath()"></td>
+					<td><input type="text" id="mathgrade" name="mathgrade"></td>
+				</tr>
+				<tr>
+					<td>Chemistry</td>
+					<td><input type="text" id='chem' name="chemistry" onchange="gradechem()"></td>
+					<td><input type="text" id='chemgrade' name="chemgrade"></td>
+				</tr>
+				<tr>
+					<td>Biology</td>
+					<td><input type="text" id="bio" name="biology" onchange="gradebio()"></td>
+					<td><input type="text" id="biograde" name="biograde"></td>
+				</tr>
+				<tr>
+					<td>French</td>
+					<td><input type="text" id="french" name="french" onchange="gradefren()"></td>
+					<td><input type="text" id='frengrade' name="frengrade"></td>
+				</tr>
+				
+				<tr>
+					<td>TOTAL</td>
+					<td><input style='border: 0px ;'type="text" name="total" id='total'></td>
+				</tr>
+				<tr>
+					<td>Remarks</td>
+					<td><input style='border: 0px ;' type="text" name="remarks" id='remark'></td>
+				</tr>
+				<tr>
+					<td>Average</td>
+					<td><input style='border: 0px ;' type="text" name="average" id="average"></td>
+				</tr>
+
+			</table>
+			<div class="row">
+				<div class="col-md-4">
+			<input type="button" class="btn btn-success table" onclick="result()" value='Get Result'>
+				</div>
+			</div>
+		</div>
+		
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	function gradeeng(){
+						score1=document.getElementById('eng').value;
+
+						if(score1>0 && score1<=40){
+
+							document.getElementById('enggrade').value='F';
+
+						}else if(score1>40 && score1<=45){
+
+							document.getElementById('enggrade').value='E';
+
+						}else if(score1>45 && score1<=50){
+
+							document.getElementById('enggrade').value='D';
+							
+						}else if(score1>50 && score1<60){
+
+							document.getElementById('enggrade').value='C';
+							
+						}else if(score1>=60 && score1<=69){
+							
+							document.getElementById('enggrade').value='B';
+
+						}else if(score1>=70 && score1<=100){
+
+							document.getElementById('enggrade').value='A';
+
+						}else{
+
+							document.getElementById('enggrade').value='Please select 0-100';
+							document.getElementById('total').value='Invalid Score';
+						}
+					}
+
+	function grademath(){
+						score1=document.getElementById('math').value;
+
+						if(score1>0 && score1<=40){
+
+							document.getElementById('mathgrade').value='F';
+
+						}else if(score1>40 && score1<=45){
+
+							document.getElementById('mathgrade').value='E';
+
+						}else if(score1>45 && score1<=50){
+
+							document.getElementById('mathgrade').value='D';
+							
+						}else if(score1>50 && score1<60){
+
+							document.getElementById('mathgrade').value='C';
+							
+						}else if(score1>=60 && score1<=69){
+							
+							document.getElementById('mathgrade').value='B';
+
+						}else if(score1>=70 && score1<=100){
+
+							document.getElementById('mathgrade').value='A';
+
+						}else{
+
+							document.getElementById('mathgrade').value='Please select 0-100';
+							document.getElementById('total').value='Invalid Score';
+						}
+					}
+
+	function gradechem(){
+						score1=document.getElementById('chem').value;
+
+						if(score1>0 && score1<=40){
+
+							document.getElementById('chemgrade').value='F';
+
+						}else if(score1>40 && score1<=45){
+
+							document.getElementById('chemgrade').value='E';
+
+						}else if(score1>45 && score1<=50){
+
+							document.getElementById('chemgrade').value='D';
+							
+						}else if(score1>50 && score1<60){
+
+							document.getElementById('chemgrade').value='C';
+							
+						}else if(score1>=60 && score1<=69){
+							
+							document.getElementById('chemgrade').value='B';
+
+						}else if(score1>=70 && score1<=100){
+
+							document.getElementById('chemgrade').value='A';
+
+						}else{
+
+							document.getElementById('chemgrade').value='Please select 0-100';
+							document.getElementById('total').value='Invalid Score';
+						}
+					}
+
+	function gradebio(){
+						score1=document.getElementById('bio').value;
+
+						if(score1>0 && score1<=40){
+
+							document.getElementById('biograde').value='F';
+
+						}else if(score1>40 && score1<=45){
+
+							document.getElementById('biograde').value='E';
+
+						}else if(score1>45 && score1<=50){
+
+							document.getElementById('biograde').value='D';
+							
+						}else if(score1>50 && score1<60){
+
+							document.getElementById('biograde').value='C';
+							
+						}else if(score1>=60 && score1<=69){
+							
+							document.getElementById('biograde').value='B';
+
+						}else if(score1>=70 && score1<=100){
+
+							document.getElementById('biograde').value='A';
+
+						}else{
+
+							document.getElementById('biograde').value='Please select 0-100';
+							document.getElementById('total').value='Invalid Score';
+						}
+					}
+
+	function gradefren(){
+						score1=document.getElementById('french').value;
+
+						if(score1>0 && score1<=40){
+
+							document.getElementById('frengrade').value='F';
+
+						}else if(score1>40 && score1<=45){
+
+							document.getElementById('frengrade').value='E';
+
+						}else if(score1>45 && score1<=50){
+
+							document.getElementById('frengrade').value='D';
+							
+						}else if(score1>50 && score1<60){
+
+							document.getElementById('frengrade').value='C';
+							
+						}else if(score1>=60 && score1<=69){
+							
+							document.getElementById('frengrade').value='B';
+
+						}else if(score1>=70 && score1<=100){
+
+							document.getElementById('frengrade').value='A';
+
+						}else{
+
+							document.getElementById('frengrade').value='Please select 0-100';
+							document.getElementById('total').value='Invalid Score';
+						}
+					}
+
+
+</script>
+</body>
+</html>

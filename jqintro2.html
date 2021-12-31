@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name='viewport' content="width=device-width">
+	<title></title>
+</head>
+<body>
+		<h2>Welcome to Moat Academy For Developers</h2>
+		<p class="para1">
+					A relational database is a database that organizes information into one or more tables.<br>
+					A table is a collection of data organized into rows and columns. Tables are sometimes referred to as relations.<br> 
+					A column is a set of data values of a particular type. <br>
+					A row is a single record in a table. 
+		</p>
+		<h2>Second Heading</h2>
+		<p>Second Paragraph</p>
+
+		<h2>Third Heading</h2>
+		<p>Third Paragraph</p>
+
+		<button type="button" id='btnShowHeadings'>Show Headings</button>
+
+		<form method="post" action="" class="form-group">
+				<input type="text" name="fullname" placeholder="fullname" id='fullname' value="Tim Cook" class="form-control">
+		</form>
+		<div id='intro'>Relax, you will understand jQuery</div>
+<!--JS Files-->
+<script type="text/javascript" src='js/jquery.min.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//hide all hidden elements
+	
+		$('h2').click(function(){
+			$(this).hide(10000);
+		});
+
+		//show all hidden h2 headings
+		$('#btnShowHeadings').click(function(){
+			$('h2').show();
+		})
+
+		$('#fullname').mouseover(function(){
+			$(this).val();
+			alert('This is the textfield')
+		})
+		$('#fullname').mouseout(function(){
+			$(this).val();
+			alert('Dont leave me')
+		})
+
+		$('#intro').hover(function(){
+
+			$(this).css('backgroundColor','pink')
+
+		},function(){
+
+			$(this).css('backgroundColor','green')
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				
+				<p>This is one line of our t&cs</p>
+				<input type="checkbox" name="tNc" id='tNc'><p>I agree to the terms and conditions</p>
+				<input type="button" name="submit" value="Submit" id="sub">
+			
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('#sub').click(function(){
+
+				var t=$('#tNc').prop('checked')
+
+				if(t==false){
+					alert('You have to agree with our T&Cs to use our services')
+				}
+				else{
+
+					alert('Proceed')
+				}
+			})
+
+
+			/*$('#show').click(function(){
+
+				$('#pword').attr('type','text')
+				
+			})*/
+			/*
+
+			$('#show').click(function(){
+				var status=$('#pword').attr('type')
+				if(status=='password'){
+				$('#pword').attr('type','text')
+				}
+				else{
+					$('#pword').attr('type','password')
+				}
+			
+			})*/
+})
+	</script>
+</body>
+</html>

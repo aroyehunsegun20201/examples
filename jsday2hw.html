@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				
+				<h3>AWS Customer Agreement</h3>
+				<input type="checkbox" name="tNc" id='tNc'><span>&nbsp;Check here to indicate that you have read and agreed to the terms and conditions</span><br>
+				<input type="button" class='form-control btn btn-warning' name="submit" value="Create Account and Continue" id="sub" disabled><br>
+
+				<h3>Where did you hear from us?</h3>
+				<input type="checkbox" name="Select All" id='select'><span>&nbsp Select All</span><br>
+				<input type="checkbox" 	class='checkoptions' name="Facebook"><span>&nbsp Facebook</span><br>
+				<input type="checkbox"  class='checkoptions' name="Google Ads"><span>&nbsp Google Ads</span><br>
+				<input type="checkbox"  class='checkoptions' name="Newspaper"><span>&nbsp Newspaper</span><br>
+				<input type="checkbox"  class='checkoptions' name="Linda Ikeji"><span>&nbsp Linda Ikeji</span><br>
+				<input type="checkbox"  class='checkoptions' name="Moat Academy"><span>&nbsp Moat Academy</span><br>
+				<input type="checkbox"  class='checkoptions' name="Punch Online"><span>&nbsp Punch Online</span><br>
+				<input type="checkbox"  class='checkoptions' name="Others"><span>&nbsp Others</span>
+			
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('#tNc').click(function(){
+
+
+				var terms=$('#tNc').prop('checked')
+				
+
+				if(terms==true){
+					
+					$('#sub').prop('disabled',false)
+					
+				}
+				else{
+
+					$('#sub').prop('disabled',true)
+					
+				}
+				// if(terms==true){$('#sub').removeAttr('disabled')}
+				// else{$('#sub').attr('disabled','disabled')}
+			})
+
+			$('#select').click(function(){
+
+				var all=$('#select').prop('checked')
+
+				if(all==true){
+
+					$('.checkoptions').prop('checked',true)
+				}
+				else{
+
+					$('.checkoptions').prop('checked',false)
+				}
+				/*$('#select').click(function(){
+					$('.checkoptions').prop('checked',$(this).prop('checked'))
+				})*/
+				
+			})
+
+		})
+
+
+	</script>
+</body>
+</html>

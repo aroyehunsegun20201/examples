@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				
+				<h2>Nigeria at 60: are things getting better?</h2>
+				<textarea id="text" class="form-control"></textarea>
+				<button id='chat' type="submit" class="btn btn-success form-control">Post My Comment</button><br>
+
+				<div>
+				<h1><span id="add">0</span>&nbspComment<span id='plr'></span></h1>
+				<p></p>
+				</div>
+
+			
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			counter = 1
+		
+
+			$('#chat').click(function(){
+
+				var comm=$('#text').val()
+
+				$('p').append(comm+'<br>')
+
+				$('#text').val('');
+				
+				$('#add').text(counter++)
+
+				if(counter==2){
+				$('#plr').text('')
+			}else{
+				$('#plr').text('s')
+			}
+		
+			})
+			
+
+
+		})
+
+
+	</script>
+</body>
+</html>

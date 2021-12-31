@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Conditional Statement</title>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+</head>
+<body>
+
+
+<div class="container">
+	<div class="row">
+		'<div class="col-12" style="border:1px solid black; background-color: brown; height:200px;" >
+		  	<h2 align='center' style="color:green;">2019/2020 UTME Online Result Checker</h2>
+
+		  	<p id='feedback'></p>
+		  	<p>Have You Written Your Exam Yet?
+		  	<select>
+		  		<option id='yes'>Yes</option>
+		  		<option id='no'>No</option>
+		  	</select>
+		  	
+		  	<select>
+		  		<option>Please select your exam location</option>
+		  		<option>Abuja</option>
+		  		<option id="location">Lagos</option>
+		  		<option>Port Harcourt</option>
+		  	</select>
+		  	<button onclick="
+		  	var answer='Feedback on Assessment: Total Score:320';
+		  	var written=document.getElementById('yes').innerHTML
+		  	var no='No';
+		  	var yes='Yes';
+		  	var locus=document.getElementById('location').innerHTML;
+
+		  	if(( locus=='Lagos')&&(written == 'Yes')){
+		  		document.getElementById('feedback').innerHTML=answer
+		  	}
+		  	
+		  	else if (document.getElementById('no').innerHTML==no){
+
+		  	}
+		    else{
+		  		alert('How do you expect to get a result when you have not written exam?')
+		  		
+		  	}
+
+		  	">Get my result</button></p>
+		</div>'
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+
+var nationality=prompt('What is your nationality?');
+var age=prompt('How old are you?');
+
+
+if((nationality.trim().toLowerCase() == 'nigerian') && ( age >=0)){ 
+	alert('You are eligible to vote');
+}
+
+else if((nationality.trim().toLowerCase() !== 'nigerian') && (age >=18)){
+
+alert('You are eligible to vote');
+}
+
+
+else{
+	alert('Sorry, you are not eligible to vote');
+}
+/*Method2
+if((nationality.trim().toLowerCase() == 'nigerian') || (age >=18)){
+
+alert('You are eligible to vote');
+}
+
+</script>
+</body>
+</html>

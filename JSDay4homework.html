@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Day4</title>
+	<link rel='stylesheet' href='css/bootstrap.css'>
+</head>
+<body>
+ <div class="container-fluid">
+ 	<div class="row">
+ 		<div class="col-md-12">
+ 		<form>
+ 			<label for='no1'>Number 1</label>
+ 			<input id='no1'type="text">
+ 			<label for='no2'>Number 2</label>
+ 			<input id='no2' type="text">
+ 		<p><button onclick="add()">Add</button><button onclick="subtract()">Subtract</button><button onclick="mod()">%</button></p>
+ 		</form>
+
+		<form>
+ 			<label for='naira'>NGN</label>
+ 			<input id='naira'type="text">
+ 		<button onclick="convert()">Convert to USD</button>
+ 		</form>
+
+
+ 		<button onclick="gender()">Buy</button><br>
+ 		
+ 		<button onclick="gender()">Like!</button>
+
+ 		</div>
+ 		<div></div>
+ 	</div>
+ </div>
+
+
+<script type="text/javascript">
+
+
+
+
+/*var counter=1;
+
+
+function like(){
+ var counter = counter+1;
+
+	if (counter>1){
+	alert('You have '+counter+' Likes')
+
+}else{
+
+	alert('You have '+counter+ 'Like')
+}*/
+
+/*function add(){
+	var num1=document.getElementById('no1').value;
+	var num2=document.getElementById('no2').value;
+	var total= Number(num1)+Number(num2);
+
+	alert(total)
+
+}
+function subtract(){
+	var num1=document.getElementById('no1').value;
+	var num2=document.getElementById('no2').value;
+
+	alert(num1-num2)
+
+}
+function mod(){
+	var num1=document.getElementById('no1').value;
+	var num2=document.getElementById('no2').value;
+
+	alert(num1%num2)
+
+}
+
+function convert(){
+	var ngn=document.getElementById('naira').value;
+	var dolls=0.002;
+	var val= Number(ngn)*Number(dolls);
+
+	alert(ngn+' is only $'+val)
+}
+
+/*function display(){+
+	var number=document.getElementById('numbox').value;
+
+	alert(number);}
+	
+	/*var gender= prompt('Enter your gender');
+
+	switch(gender){
+		case 'Female':
+		alert('Shoes and bags are available');
+		break;
+		case 'Male':
+		alert('Phones are available');
+		break;
+		default:
+		alert('No product match found')
+	}*/
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1>Please DO NOT Start until you are told to do so:</h1>
+			
+				<form method="post" action="" class="form-group">
+
+					<input type="text" name="birthname" placeholder="birthname" id='birthname'>
+				
+				<select class="form-control" id="opt1">
+					<option value="">Select Gender</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+					<option value="Other">Other</option>
+				</select><br>
+				<!--
+				<p>1. Which Party won in Oyo State?</p>
+				<p>2. Who changed Democracy Day to June 12?</p>
+				<select class="form-control" id='opt2'>
+					<option value="">Select an Option</option>
+					<option value="Ikot Epene">Ikot Epene</option>
+					<option value="Dakoru">Dakoru</option>
+					<option value="Dixon">Dixon</option>
+				</select>-->
+				
+				<input type='text'  id='availopt' class="form-control">
+				<input type='button' class="btn btn-dark" id='nextq' value='Make a choice' class="form-control">
+				</form>
+				
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+
+			
+
+			/*$('select').change(function(){
+				var gender = $('#opt1').val()
+
+				if(gender=='Male'){
+
+					$('#availopt').val('Leather Wallets are available');
+					
+				}
+				else if(gender=='Female'){
+
+					$('#availopt').val('Shoes and bags are available');
+				
+				}
+				else if(gender=='Other'){
+
+					$('#availopt').val('Would you prefer shoes and bags or leather wallets?');
+
+				}
+				/*else{
+					$('#availopt').val('Please make a selection')
+					}
+				})
+
+			$('#nextq').click(function(){
+
+				$('h1').text('You may begin your exam');
+				$('#birthname').val('Oyekunbi Adams');
+				
+				})*/
+
+			
+			
+		})
+
+		/*var answer = $('#opt1').val()
+			var ans= $('#opt2').val()
+
+			$('#nextq').click(function(){
+				if(answer=="" || ans==""){
+					alert('Please, select an answer')
+				}
+				
+			
+			})*/
+		/*counter=1;
+			$('select').click(function(event){
+				event.preventDefault();
+				alert('You have lost '+counter+' marks')
+				counter =counter+1;
+			})
+
+			$('#nextq').click(function(event){
+				alert('You have lost '+counter+' marks')
+				counter =counter+1;
+			})
+			*/
+		/*$('#login').click(function(){
+				var name = $('#fullname').val()
+				var pass = $('#pword').val()
+
+				if(name==''){
+					alert('Please fill in your full name')
+				}
+				else if(pass==''){
+					alert('Please fill in your password')
+				}
+				else{
+					alert('Welcome '+name)
+				}
+			})*/
+		/*var content = $('#test').html()
+		alert(content)*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv='X-UA-Compatible' content="IE=edge">
+	<title>DOM Manipulation</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 id='test'>Hello Beautiful World!</h1>
+				<input type="text" name="fullname" id='fname' class="form-control">
+				<button type="submit" class="btn btn-success">Check</button>
+			</div>
+
+			<div class="col-md-6">
+				<form method="post" action="" class="form-group">
+				<input type="text" name="fullname" placeholder="fullname" id='fullname' class="form-control">
+				<input type="password" name="password" placeholder="password" id='pword' class="form-control">
+				<button type="submit" class="btn btn-success" id='login'>Login</button>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#login').click(function(){
+				var name = $('#fullname').val()
+				var pass = $('#pword').val()
+
+				if(name==''){
+					alert('Please fill in your full name')
+				}
+				else if(pass==''){
+					alert('Please fill in your password')
+				}
+				else{
+					alert('Welcome '+name)
+				}
+			})
+		})
+		/*var content = $('#test').html()
+		alert(content)*/
+	</script>
+</body>
+</html>
